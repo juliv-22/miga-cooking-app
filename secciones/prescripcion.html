@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miga | La cocina como refugio</title>
+    <link rel="icon" type="image/png" href="../visuales/icono.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Caveat:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/estilos.css">
+
+
+
+
+</head>
+
+
+<body>
+<header id="inicio"> 
+
+     <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <h1 class="navbar-brand" >MIGA</h1>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Menu de navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/index.html">Inicio</a>
+        <a class="nav-link-active" href="#">Prescripción Emocional</a>
+        <a class="nav-link" href="../secciones/receta.html">Receta del día</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+
+
+
+
+
+
+<main>     
+  <section id="hero" class="container-xxl">
+
+  <div class="align-items-center d-flex flex-column p-lg-5">
+        
+      <div class="col-12 polaroid-receta">
+          <h1 class="hero-title text-center">
+         ¿CÓMO TE <span class="refugio">SIENTES<svg viewBox="0 0 160 48" xmlns="http://www.w3.org/2000/svg"><ellipse cx="80" cy="24" rx="74" ry="20" /></svg></span> HOY?
+      </h1>
+
+        <p class="hero-desc text-center my-0">
+        Elige tu estado de ánimo y encuentra recetas que respeten tu energía emocional
+      </p>
+     
+       </div> 
+  </div>
+</section>
+ </main>
+
+
+
+
+<section class="filtros container-xxl p-3 p-lg-5">
+  <div class="col-12 d-flex flex-column gap-4">
+    <div class="filtros justify-content-md-center">
+  <button class="filtro-btn active" data-filtro="todos">Todas</button>
+  <button class="filtro-btn no-disponible" data-filtro="burnout">Burnout</button>
+  <button class="filtro-btn no-disponible" data-filtro="ansiedad">Ansiedad</button>
+  <button class="filtro-btn no-disponible" data-filtro="tristeza">Tristeza</button>
+  <button class="filtro-btn no-disponible" data-filtro="soledad">Soledad</button>
+  <button class="filtro-btn no-disponible" data-filtro="energia">Falta de energía</button>
+  <button class="filtro-btn no-disponible" data-filtro="confort">Necesito confort</button>
+</div>
+
+<div class="filtro-aviso" id="filtroAviso" hidden>
+  <p>Tenemos que agregar más recetas. Por ahora puedes ver la disponible en <strong>Todas</strong>.</p>
+</div>
+  </div>
+</section>
+
+
+<section class="container-fluid recetas">
+
+<div class=" container-xxl p-3 p-lg-5">
+  <div class="col-12">
+          <h2 class="hero-title text-center">
+         TODAS LAS RECETAS</h2>
+    </div>
+
+<div class="grid-recetas gap-3 gap-md-5 p-3 p-lg-5 d-flex flex-column flex-md-row align-items-center">
+
+  <div class="grid-card grid-card-tristeza col-12 col-md-6 p-4 p-md-5"> 
+    <div class="grid-img-wrap">
+      <figure>
+        <picture>
+            <source media="(max-width: 554px )" srcset="../visuales/avena_cl.jpg">
+            <source media="(max-width: 768px )" srcset="../visuales/avena_tb.jpg">
+            <img src="../visuales/avena_pc.jpg" class="img-fluid" alt="Avena cremosa">
+        </picture>
+     </figure>
+   </div>
+  </div>
+
+  <div class="grid-info col-12 col-md-6">
+      <p class="receta px-0 pb-2">Tristeza</p>
+      <h3>Avena Cremosa</h3>
+
+      <ul class="d-flex flex-row gap-2 pt-2 pb-4">
+              <li class="info-item d-flex flex-row">
+                <img src="../visuales/tiempo.svg" alt="tiempo icono" class="icono">
+                <p>10min</p>
+              </li>
+              <li class="info-item d-flex flex-row">
+                <img src="../visuales/esfuerzo.svg" alt="esfuerzo icono" class="icono">
+                <p>Bajo</p>
+              </li>
+            </ul>
+
+        <p> <strong>Ingredientes:</strong> Avena, agua, azúcar (opcional), miel. </p>
+
+        <div class="d-flex flex-sm-column justify-content-center align-items-md-start">
+        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#recetaModal">Ver más</button>
+        </div>
+    </div>  
+</div>
+
+
+<div class="grid-recetas gap-3 gap-md-5 p-3 p-lg-5 d-flex flex-column flex-column-reverse flex-md-row align-items-center">
+
+  <div class="grid-info col-12 col-md-6">
+      <p class="receta px-0 pb-2">Ansiedad</p>
+      <h3>Arroz de consuelo</h3>
+
+      <ul class="d-flex flex-row gap-2 pt-2 pb-4">
+              <li class="info-item d-flex flex-row">
+                <img src="../visuales/tiempo.svg" alt="tiempo icono" class="icono">
+                <p>25min</p>
+              </li>
+              <li class="info-item d-flex flex-row">
+                <img src="../visuales/esfuerzo.svg" alt="esfuerzo icono" class="icono">
+                <p>Bajo</p>
+              </li>
+            </ul>
+
+        <p> <strong>Ingredientes:</strong> Arroz, agua, mantequilla, sal, algo verde (opcional). </p>
+
+        <div class="d-flex flex-sm-column justify-content-center align-items-md-start">
+        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#recetaModal">Ver más</button>
+        </div>
+    </div>  
+
+
+     <div class="grid-card grid-card-ansiedad col-12 col-md-6 p-4 p-md-5"> 
+    <div class="grid-img-wrap">
+      <figure>
+        <picture>
+            <source media="(max-width: 554px )" srcset="../visuales/arroz_cl.jpg">
+            <source media="(max-width: 768px )" srcset="../visuales/arroz_tb.jpg">
+            <img src="../visuales/arroz_pc.jpg" class="img-fluid" alt="Arroz de consuelo">
+        </picture>
+     </figure>
+   </div>
+  </div>
+</div>
+
+
+<div class="grid-recetas gap-3 gap-md-5 p-3 p-lg-5 d-flex flex-column flex-md-row align-items-center">
+
+  <div class="grid-card grid-card-confort col-12 col-md-6 p-4 p-md-5"> 
+    <div class="grid-img-wrap">
+      <figure>
+        <picture>
+            <source media="(max-width: 554px )" srcset="../visuales/galletas_cl.jpg">
+            <source media="(max-width: 768px )" srcset="../visuales/galletas_tb.jpg">
+            <img src="../visuales/galletas_pc.jpg" class="img-fluid" alt="Galletas y té">
+        </picture>
+     </figure>
+   </div>
+  </div>
+
+  <div class="grid-info col-12 col-md-6">
+      <p class="receta px-0 pb-2">Necesito confort</p>
+      <h3>Galletas y té</h3>
+
+      <ul class="d-flex flex-row gap-2 pt-2 pb-4">
+              <li class="info-item d-flex flex-row">
+                <img src="../visuales/tiempo.svg" alt="tiempo icono" class="icono">
+                <p>10min</p>
+              </li>
+              <li class="info-item d-flex flex-row">
+                <img src="../visuales/esfuerzo.svg" alt="esfuerzo icono" class="icono">
+                <p>Bajo</p>
+              </li>
+            </ul>
+
+        <p> <strong>Ingredientes:</strong> Té, agua caliente, galletitas. </p>
+
+        <div class="d-flex flex-sm-column justify-content-center align-items-md-start">
+        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#recetaModal">Ver más</button>
+        </div>
+    </div>  
+</div>
+
+</div>
+</section>   
+
+
+
+<div class="wave-wrap1" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <!-- green fill -->
+    <path d="M0,52 C160,95 320,10 480,55 C640,100 800,8  960,55 C1120,102 1280,12 1440,55 L1440,100 L0,100 Z"
+          fill="#98b5f1"/>
+    <!-- orange outline wave on top -->
+    <path d="M0,52 C160,95 320,10 480,55 C640,100 800,8  960,55 C1120,102 1280,12 1440,55"
+          fill="none" stroke="#E26127" stroke-width="20" stroke-linecap="round"/>
+  </svg>
+</div>
+
+
+
+
+
+<section class="container-fluid p-3 p-lg-5" id="cta_final">
+
+    <div class="accordion container-xxl" id="accordionIdeas">
+      <div class="accordion-item">
+
+        <h2>
+  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIdeas" aria-expanded="false" aria-controls="collapseIdeas">
+    <span>No-cocina: <br>autocuidado suave</span>
+  </button>
+</h2>
+
+        <div id="collapseIdeas" class="accordion-collapse collapse" data-bs-parent="#accordionIdeas">
+          <div class="accordion-body px-0">
+            <p>A veces no necesitas cocinar. Aquí hay ideas gentiles para cuidarte.</p>
+            <ul class="lista-ideas">
+              <li>Beber agua fría despacio</li>
+              <li>Comer en el suelo sobre un cojín</li>
+              <li>Usar platos pequeños (menos abrumador)</li>
+              <li>Abrir una ventana mientras cocinas</li>
+              <li>Poner música suave o silencio</li>
+              <li>Lavarte las manos con agua tibia antes de empezar</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+
+  <div class="wave-wrap-prescripcion" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+
+    <path d="M0,52 C160,95 320,10 480,55 C640,100 800,8  960,55 C1120,102 1280,12 1440,55 L1440,100 L0,100 Z"
+          fill="#BDCCD3"/>
+    <path d="M0,52 C160,95 320,10 480,55 C640,100 800,8  960,55 C1120,102 1280,12 1440,55"
+          fill="none" stroke="#E26127" stroke-width="20" stroke-linecap="round"/>
+  </svg>
+</div>
+
+
+
+<footer class="footer col-12 p-5">
+
+  <h1 class="footer-brand">MIGA</h1>
+  <p class="footer-tagline">No necesitas hacerlo perfecto para merecer comer bien.</p>
+ 
+  <p class="footer-dev">
+    <strong>Julieth Altuve</strong> <br> Composición Digital <br> 5.º Cuatrimestre
+  </p>
+ 
+  <nav class="footer-social" aria-label="Redes sociales">
+    <ul>
+      <li>
+         <a href="https://www.instagram.com/jvap.design/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="../visuales/instagram-icono.svg" alt="Instagram Icono" width="20" height="20"></a>
+      </li>
+
+      <li>
+         <a href="www.linkedin.com/in/julieth-altuve" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <img src="../visuales/linkedin-icono.svg" alt="LinkedIn Icono" width="20" height="20"></a>
+      </li>
+
+
+      <li>
+         <a href="https://www.upwork.com/freelancers/~01a9d50e97b42b6bd5?mp_source=share" target="_blank" rel="noopener noreferrer" aria-label="Upwork">
+        <img src="../visuales/upwork-icono.svg" alt="Upwork Icono" width="20" height="20"></a>
+      </li>
+    </ul>
+  
+  </nav>
+ 
+  <p class="footer-copy">© 2026 REFUGIO  ·  Hecho con cuidado</p>
+  
+</footer>
+
+ 
+<!-- ========================================================
+     Pop Up recetas
+     ======================================================== -->
+<div class="modal fade" id="recetaModal" tabindex="-1" role="dialog" aria-labelledby="recetaModalLabel" aria-hidden="true">
+
+
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="recetaModalLabel">
+          Receta próximamente</h2>
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body">
+        <p>Esta receta completa estará disponible muy pronto en
+           <strong>Preescripción Emocional</strong>. Mientras tanto puedes
+           explorar todas las recetas disponibles.</p>
+      </div>
+
+      <div class="modal-footer">
+        <a href="prescripcion.html" class="boton-popup">
+          Ver recetas
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ 
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+ 
+<script>
+document.querySelectorAll('.filtro-btn.no-disponible').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const aviso = document.getElementById('filtroAviso');
+    aviso.hidden = false;
+    // Lo oculta después de 4 segundos
+    setTimeout(() => aviso.hidden = true, 4000);
+  });
+});
+
+</script>
+ 
+</body>
+</html>
